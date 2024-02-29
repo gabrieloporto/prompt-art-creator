@@ -1,7 +1,7 @@
 import { useFormStatus } from "react-dom";
 import { HomeIcon } from "./HomeIcon";
 import { Output } from "../lib/types";
-import MyLoader from "./Skeleton";
+import Skeleton from "./Skeleton";
 import Image from "next/image";
 
 export default function FormContent({ output }: Output) {
@@ -11,7 +11,7 @@ export default function FormContent({ output }: Output) {
     <>
       {pending ? (
         <section className="flex items-center justify-center mb-[21px]">
-          <MyLoader />
+          <Skeleton />
         </section>
       ) : !pending && !output ? (
         <section className="flex gap-4 items-center justify-center">
